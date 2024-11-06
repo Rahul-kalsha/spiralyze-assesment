@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="thank-you-wrapper">
+        <div class="thank-you-container">
+            <h1 class="thank-you-title">Thank You, <span id="userName"></span>!</h1>
+            <p class="thank-you-message">We're excited to connect with you! Our consultant will be in touch shortly. In
+                the meantime, feel free to explore more on our site.</p>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const fname = urlParams.get('fname');
+        const lname = urlParams.get('lname');
+        document.getElementById('userName').textContent = `${fname} ${lname}`;
+    </script>
+</body>
+
+</html>
